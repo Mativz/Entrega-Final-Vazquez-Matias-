@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ubicación</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html">Mi Librería</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ubicacion.html">Ubicación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="container">
+            <h1>Ubicación</h1>
+            <p>Encuéntranos en la siguiente dirección:</p>
+            <p>Provincias Unidas 1575,Cordoba,Argentina</p>
+            <p>Teléfono: (351) 2105234</p>
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    
+        <script>
+            function initMap() {
+                var location = {lat: -34.397, lng: 150.644};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 8,
+                    center: location
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+        </script>        
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d13611.059041078119!2d-64.23064674999999!3d-31.475656649999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses-419!2sar!4v1722567789988!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </body>
+    </html>
+    
